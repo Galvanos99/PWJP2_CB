@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Users List</title>
+    <title>Teacher List</title>
 </head>
 <body>
     <h1>Users</h1>
-    <a href="{{ url_for('add_user') }}">Add User</a><br>
-    <a href="{{ url_for('delete_user') }}">Delete User</a><br>
+    <a href="{{ url_for('add_teacher') }}">Add Teacher</a><br>
+    <a href="{{ url_for('delete_user') }}">Delete Teacher</a><br>
     <ul>
         {% for user in users %}
-        <li>{{user.id}} : {{ user.username }} - {{ user.email }}</li>
+        <li>{{user.id}} : {{ user.name }} - {{ user.subject }} - {{ user.time }}</li>
         {% endfor %}
     </ul>
 </body>
